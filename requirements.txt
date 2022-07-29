@@ -1,0 +1,7 @@
+python-dotenv
+motor==2.5.1
+dnspython==2.2.0
+disnake==2.5.2
+certifi
+fuzzywuzzy
+python-Levenshtein-wheels
