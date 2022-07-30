@@ -71,7 +71,7 @@ class DatabaseManager:
         fuzzy_trigger_return = process.extractOne(
             query=trigger.lower(),
             choices=list(self.cache.trigger_phrases.keys()),
-            scorer=fuzz.WRatio
+            scorer=fuzz.partial_ratio
         )
         if fuzzy_trigger_return[1] < 80:
             return None
