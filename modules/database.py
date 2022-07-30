@@ -73,7 +73,7 @@ class DatabaseManager:
             choices=list(self.cache.trigger_phrases.keys()),
             scorer=fuzz.partial_ratio
         )
-        if fuzzy_trigger_return[1] < 80:
+        if fuzzy_trigger_return[1] < 90:
             return None
         return await self.web.find_phrase_by_id(self.cache.trigger_phrases[fuzzy_trigger_return[0]])
 
